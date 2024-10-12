@@ -7,7 +7,6 @@ html {
   }
   
   body {
-    /* Remove fixed height */
     padding: 4em;
     color: rgb(0, 0, 0);
     font-family: 'Anonymous Pro', monospace;
@@ -29,8 +28,8 @@ html {
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
-    animation: typing1 1.5s steps(13, end) forwards, blink-caret 0.75s step-end infinite;
-    line-height: 1.1;
+    animation: typing1 2.5s steps(13, end) forwards, blink-caret 0.75s step-end 3 forwards;
+    line-height: 1.2;
   }
   
   /* Typewriter Animation for the Second Line */
@@ -45,12 +44,11 @@ html {
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
-    /* Apply typing animation with delay */
-    animation: typing2 3.5s steps(28, end) forwards, blink-caret 0.75s step-end infinite 2s;
+    animation: typing2 2s steps(28, end) forwards, blink-caret 0.75s step-end infinite;
     /* Specify delays for each animation */
-    animation-delay: 2s, 2s; /* Both animations start after 2s */
+    animation-delay: 3s, 2.5s; /* Typing, Cursor*/
     animation-fill-mode: forwards;
-    line-height: 0.5; /* Adjust as needed for cursor alignment */
+    line-height: 1.2; /* Adjust as needed for cursor alignment */
   }
   
   /* The typing effect for the first line */
@@ -70,7 +68,7 @@ html {
       border-right-color: transparent; /* Hide cursor initially */
     }
     to {
-      width: 27ch;
+      width: 28ch;
       border-right-color: rgb(0, 0, 0); /* Show cursor after typing */
     }
   }

@@ -39,42 +39,19 @@ export default function HomePage() {
 
   // Function to render the second line with gradient text
   function renderDisplayedText2() {
-    const tokens = [
-      {
-        text: 'Chemistry',
-        gradient: { from: 'orange', to: 'black', deg: 90 },
-      },
-      {
-        text: ' + ',
-        gradient: null,
-      },
-      {
-        text: 'Computer Science',
-        gradient: { from: 'black', to: 'green', deg: 90 },
-      },
-    ];
-
-    return tokens.map((token, index) => {
-      if (token.gradient) {
-        return (
-          <Text
-            key={index}
-            component="span"
-            variant="gradient"
-            gradient={token.gradient}
-          >
-            {token.text}
-          </Text>
-        );
-      } else {
-        return (
-          <Text key={index} component="span">
-            {token.text}
-          </Text>
-        );
-      }
-    });
+    return (
+      <Text component="span" inherit>
+        <span style={{ background: 'linear-gradient(90deg, orange, black)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Chemistry
+        </span>
+        {' + '}
+        <span style={{ background: 'linear-gradient(90deg, black, green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Computer Science
+        </span>
+      </Text>
+    );
   }
+  
 
   return (
     <div>
