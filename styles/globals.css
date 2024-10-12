@@ -1,0 +1,88 @@
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html {
+    min-height: 100%;
+  }
+  
+  body {
+    /* Remove fixed height */
+    padding: 4em;
+    color: rgb(0, 0, 0);
+    font-family: 'Anonymous Pro', monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+  /* Typewriter Animation for the First Line */
+  .typewriter1 h1 {
+    position: relative;
+    top: 50%;
+    width: 13ch; /* 13 characters */
+    margin: 0 auto;
+    border-right: 3px solid rgb(0, 0, 0); /* Keeping the original orange cursor */
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    animation: typing1 1.5s steps(13, end) forwards, blink-caret 0.75s step-end infinite;
+    line-height: 1.1;
+  }
+  
+  /* Typewriter Animation for the Second Line */
+  .typewriter2 h1 {
+    position: relative;
+    top: 50%;
+    width: 0; /* Initially hide the text */
+    margin: 0 auto;
+    border-right: 3px solid transparent; /* Initially transparent cursor */
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    /* Apply typing animation with delay */
+    animation: typing2 3.5s steps(28, end) forwards, blink-caret 0.75s step-end infinite 2s;
+    /* Specify delays for each animation */
+    animation-delay: 2s, 2s; /* Both animations start after 2s */
+    animation-fill-mode: forwards;
+    line-height: 0.5; /* Adjust as needed for cursor alignment */
+  }
+  
+  /* The typing effect for the first line */
+  @keyframes typing1 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 13ch;
+    }
+  }
+  
+  /* The typing effect for the second line */
+  @keyframes typing2 {
+    from {
+      width: 0;
+      border-right-color: transparent; /* Hide cursor initially */
+    }
+    to {
+      width: 27ch;
+      border-right-color: rgb(0, 0, 0); /* Show cursor after typing */
+    }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(0, 0, 0);
+    }
+  }
+  

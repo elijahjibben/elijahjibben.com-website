@@ -1,12 +1,13 @@
 import '@mantine/core/styles.css';
+import '../styles/globals.css';
 
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Elijah Jibben',
+  description: 'I am making a website!',
 };
 
 export default function RootLayout({ children }: { children: any }) {
