@@ -7,7 +7,6 @@ html {
   }
   
   body {
-    padding: 4em;
     color: rgb(0, 0, 0);
     font-family: 'Anonymous Pro', monospace;
     display: flex;
@@ -19,15 +18,13 @@ html {
   /* Typewriter Animation for the First Line */
   .typewriter1 h1 {
     position: relative;
-    top: 50%;
     width: 13ch; /* 13 characters */
     margin: 0 auto;
     border-right: 3px solid rgb(0, 0, 0); /* Keeping the original orange cursor */
-    font-size: 180%;
+    font-size: 600%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);
     animation: typing1 2.5s steps(13, end) forwards, blink-caret 0.75s step-end 3 forwards;
     line-height: 1.2;
   }
@@ -35,15 +32,13 @@ html {
   /* Typewriter Animation for the Second Line */
   .typewriter2 h1 {
     position: relative;
-    top: 50%;
     width: 0; /* Initially hide the text */
     margin: 0 auto;
     border-right: 3px solid transparent; /* Initially transparent cursor */
-    font-size: 180%;
+    font-size: 250%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);
     animation: typing2 2s steps(28, end) forwards, blink-caret 0.75s step-end infinite;
     /* Specify delays for each animation */
     animation-delay: 3s, 2.5s; /* Typing, Cursor*/

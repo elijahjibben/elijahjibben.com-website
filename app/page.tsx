@@ -104,26 +104,28 @@ export default function HomePage() {
         </div>
 
         {/* Arrow that scrolls down */}
-        <Transition
-          mounted={showArrow}
-          transition="fade"
-          duration={500}
-          timingFunction="ease"
-        >
-          {(styles) => (
-            <Button
-              variant="subtle"
-              style={{ ...styles, marginTop: 20 }}
-              onClick={() => {
-                if (secondPageRef.current) {
-                  secondPageRef.current.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              <IconArrowDown size={32} />
-            </Button>
-          )}
-        </Transition>
+        <div style={{ height: '50px', marginTop: 20 }}>
+          <Transition
+            mounted={showArrow}
+            transition="fade"
+            duration={500}
+            timingFunction="ease"
+          >
+            {(styles) => (
+              <Button
+                variant="subtle"
+                style={styles}
+                onClick={() => {
+                  if (secondPageRef.current) {
+                    secondPageRef.current.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                <IconArrowDown size={32} />
+              </Button>
+            )}
+          </Transition>
+        </div>
       </Center>
 
       {/* Second page content */}
