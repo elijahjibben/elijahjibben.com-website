@@ -7,6 +7,7 @@ import LaunchPage from './components/Main/LaunchPage';
 import SecondPage from './components/Pages/SecondPage';
 import { useScrollIntoView } from '@mantine/hooks';
 import ThirdPage from './components/Pages/ThirdPage';
+import { CardsCarousel } from './Carousels/CardsCarousel';
 
 export default function HomePage() {
   // Initialize the useScrollIntoView hook
@@ -28,6 +29,7 @@ export default function HomePage() {
       <div>
         <ThirdPage />
       </div>
+      
     </div>
   );
 }

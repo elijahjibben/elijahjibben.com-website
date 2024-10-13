@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Flex, Title, Text, Box } from '@mantine/core';
 import './animatedLine.css';
+import { CardsCarousel } from '@/app/Carousels/CardsCarousel';
 
 function ThirdPage() {
   const [inView, setInView] = useState(false);
@@ -51,11 +52,13 @@ function ThirdPage() {
       {/* Smaller title below the paragraphs */}
       <Flex direction="column" align="flex-start">
         <Flex align="center">
-          <Title order={3} style={{ marginRight: '10px' }}>
+          <Title order={3} style={{ marginBottom: '10px' }}>
             Featured
           </Title>
         </Flex>
       </Flex>
+
+      <CardsCarousel />
     </Container>
   );
 }
