@@ -23,7 +23,7 @@ const Logo: React.FC = () => {
       size="xl"
     >
       <Image
-        src="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/images/turtle_icon_transparent.png?raw=true"
+        src="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/app/images/turtle_icon_transparent.png?raw=true"
         alt="Logo"
         width={40}
         height={40}
