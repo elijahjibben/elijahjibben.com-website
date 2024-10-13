@@ -8,6 +8,7 @@ import SecondPage from './components/Pages/SecondPage';
 import { useScrollIntoView } from '@mantine/hooks';
 import ThirdPage from './components/Pages/ThirdPage';
 import FourthPage from './components/Pages/FourthPage'; // Import the FourthPage
+import FooterComponent from './components/common/Footer';
 
 export default function HomePage() {
   // Initialize the useScrollIntoView hook
@@ -34,6 +35,12 @@ export default function HomePage() {
       <div style={{ height: '60vh' }}>
         <FourthPage />
       </div>
+
+      <div>
+        <FooterComponent/>
+      </div>
+
+
     </div>
   );
 }
