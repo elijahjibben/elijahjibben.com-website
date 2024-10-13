@@ -12,7 +12,8 @@ import {
   AppShell,
   Menu,
   rem,
-  Flex, // Imported Flex
+  Flex,
+  ActionIcon, // Imported ActionIcon
 } from '@mantine/core';
 import {
   IconArrowDown,
@@ -24,6 +25,7 @@ import {
   IconChevronDown,
 } from '@tabler/icons-react';
 import { Space_Mono } from 'next/font/google';
+import { useRouter, usePathname } from 'next/navigation'; // Imported hooks
 
 const spaceMono = Space_Mono({
   weight: '700',
@@ -36,6 +38,9 @@ export default function HomePage() {
   const [showArrow, setShowArrow] = useState(false);
 
   const secondPageRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter(); // Initialize router
+  const pathname = usePathname(); // Get current path
 
   // useEffect for showing the arrow after typing animations
   useEffect(() => {
@@ -90,6 +95,17 @@ export default function HomePage() {
     );
   }
 
+  // Handler for clicking the logo
+  const handleLogoClick = () => {
+    if (pathname === '/') {
+      // If on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // If not on home page, navigate to home page
+      router.push('/');
+    }
+  };
+
   return (
     <div>
       {/* Navigation bar that fades in */}
@@ -109,14 +125,19 @@ export default function HomePage() {
                 justify="space-between"
                 style={{ height: '100%', paddingLeft: 20, paddingRight: 20, width: '100%' }}
               >
-                {/* Logo on the Left */}
-                <Image
-                  src="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/images/turtle_icon.png?raw=true"
-                  alt="Logo"
-                  radius="xl"
-                  width={40}
-                  height={40}
-                />
+                {/* Logo on the Left wrapped with ActionIcon */}
+                <ActionIcon 
+                onClick={handleLogoClick} 
+                style={{ cursor: 'pointer' }}
+                variant='transparent'
+                size={"xl"}>
+                  <Image
+                    src="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/images/turtle_icon_transparent.png?raw=true"
+                    alt="Logo"
+                    width={40}
+                    height={40}
+                  />
+                </ActionIcon>
 
                 {/* Navigation Buttons on the Right */}
                 <Group>
