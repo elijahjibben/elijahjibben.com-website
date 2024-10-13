@@ -61,7 +61,6 @@ function renderDisplayedText2() {
   );
 }
   
-
   return (
     <div>
       {/* Navigation bar that fades in */}
