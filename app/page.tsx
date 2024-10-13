@@ -10,20 +10,29 @@ import {
   Image,
   Group,
   AppShell,
+  useMantineColorScheme,
+  useComputedColorScheme
 } from '@mantine/core';
 import { IconArrowDown } from '@tabler/icons-react';
+import {FaSun, FaMoon} from 'react-icons/fa'
 
 export default function HomePage() {
   // State variables for visibility of navbar and arrow
   const [showNavbar, setShowNavbar] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
+  const {setColorScheme} = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme('light');
+
+  const toggleColorScheme = () => {
+    setColorScheme(computedColorScheme === "dark" ? 'light' : 'dark')
+  }
 
   const secondPageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Total duration for both typewriter animations
-    const typingDuration1 = 3500; // 3.5 seconds for first line
-    const typingDuration2 = 3500; // 3.5 seconds for second line
+    const typingDuration1 = 2500; // 3.5 seconds for first line
+    const typingDuration2 = 2000; // 3.5 seconds for second line
     const buffer = 500; // 0.5 seconds buffer
 
     const totalDuration = typingDuration1 + buffer + typingDuration2;
@@ -38,19 +47,19 @@ export default function HomePage() {
   }, []);
 
   // Function to render the second line with gradient text
-  function renderDisplayedText2() {
-    return (
-      <Text component="span" inherit>
-        <span style={{ background: 'linear-gradient(90deg, orange, black)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          Chemistry
-        </span>
-        {' + '}
-        <span style={{ background: 'linear-gradient(90deg, black, green)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          Computer Science
-        </span>
-      </Text>
-    );
-  }
+function renderDisplayedText2() {
+  return (
+    <Text component="span" inherit>
+      <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+        Chemistry
+      </span>
+      {' + '}
+      <span style={{ background: 'var(--gradient-secondary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+        Computer Science
+      </span>
+    </Text>
+  );
+}
   
 
   return (
@@ -59,7 +68,7 @@ export default function HomePage() {
       <Transition
         mounted={showNavbar}
         transition="fade"
-        duration={500}
+        duration={1000}
         timingFunction="ease"
       >
         {(styles) => (
@@ -82,6 +91,9 @@ export default function HomePage() {
                   <Button variant="subtle">Projects</Button>
                   <Button variant="subtle">Resume</Button>
                   <Button variant="subtle">Contact</Button>
+                  <Button size='sm' variant='link' onClick={toggleColorScheme}>
+                    {computedColorScheme === "dark" ? <FaSun /> : <FaMoon />}
+                  </Button>
                 </Group>
               </Group>
             </AppShell.Header>
@@ -108,7 +120,7 @@ export default function HomePage() {
           <Transition
             mounted={showArrow}
             transition="fade"
-            duration={500}
+            duration={1000}
             timingFunction="ease"
           >
             {(styles) => (
