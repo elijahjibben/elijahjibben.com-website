@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Transition, AppShell, Flex } from '@mantine/core';
 import Logo from './Logo';
 import NavigationButtons from './NavigationButtons';
-import { usePathname } from 'next/navigation'; // Import the hook to get the current path
+import { usePathname } from 'next/navigation';
 
 const HeaderComponent: React.FC = () => {
   const pathname = usePathname(); // Get the current route

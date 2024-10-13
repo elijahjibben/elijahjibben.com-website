@@ -6,7 +6,6 @@ function SecondPage() {
   const [inView, setInView] = useState(false);
   const html = '<p>Hello, my name is Elijah! I am currently a junior chemistry and computer science student at Grand Canyon University.</p><p>My biggest interests are in particle simulations and quantum chemistry. I also have a deep interest in organic chemistry and how it can be modeled through computational techniques. In computer science, I am particularly drawn to machine learning and platform design. In my free time, I enjoy modding video games and exploring the applications of virtual reality.</p><p>After graduation, I plan to pursue a PhD in Chemistry, focusing on computational or quantum chemistry, and build a career in research. I am incredibly passionate about chemistry, and I am driven by the opportunity to apply computer science to the field.</p>';
 
-
   useEffect(() => {
     const handleScroll = () => {
       const aboutMeSection = document.getElementById('about-me-section');
@@ -35,21 +34,21 @@ function SecondPage() {
         </Flex>
       </Flex>
 
-      {/* Image and Paragraph side by side */}
-      <Flex align="center">
+      {/* Image and Paragraph centered as a group */}
+      <Flex align="center" justify="center">
         <Image
           src="https://via.placeholder.com/250"
           alt="Profile photo"
           radius="md"
           width={250}
           height={250}
-          style={{ flexShrink: 0, marginRight: '20px' }} // Ensures the image does not shrink
+          style={{ flexShrink: 0, marginRight: '20px' }} // Ensures the image does not shrink and has space to the right
         />
         <Box w={450}>
-            <TypographyStylesProvider>
-              <div dangerouslySetInnerHTML={{__html: html}} />
-            </TypographyStylesProvider>
-          </Box>
+          <TypographyStylesProvider>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </TypographyStylesProvider>
+        </Box>
       </Flex>
     </Container>
   );

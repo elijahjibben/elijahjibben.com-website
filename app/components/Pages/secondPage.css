@@ -6,6 +6,7 @@
   }
   
   .animate-line {
-    width: 100px; /* The final width of the lines */
+    width: 200px; /* The final width of the lines */
+    transition-delay: 0.5s;
   }
   
