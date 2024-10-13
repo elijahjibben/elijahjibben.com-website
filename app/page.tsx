@@ -15,31 +15,17 @@ import {
 } from '@mantine/core';
 import { IconArrowDown } from '@tabler/icons-react';
 import {FaSun, FaMoon} from 'react-icons/fa'
-import { Space_Mono, Anonymous_Pro } from 'next/font/google';
+import { Space_Mono } from 'next/font/google';
 
 const spaceMono = Space_Mono({
   weight: '700',
   subsets: ['latin'],
-  display: 'swap',
 });
-
-const anonymousPro = Anonymous_Pro({
-  weight: '400',
-  style: 'normal',
-  subsets: ['latin']
-});
-
 
 export default function HomePage() {
   // State variables for visibility of navbar and arrow
   const [showNavbar, setShowNavbar] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
-  const {setColorScheme} = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light');
-
-  const toggleColorScheme = () => {
-    setColorScheme(computedColorScheme === "dark" ? 'light' : 'dark')
-  }
 
   const secondPageRef = useRef<HTMLDivElement>(null);
 
@@ -105,9 +91,6 @@ function renderDisplayedText2() {
                   <Button variant="subtle">Projects</Button>
                   <Button variant="subtle">Resume</Button>
                   <Button variant="subtle">Contact</Button>
-                  <Button size='sm' variant='link' onClick={toggleColorScheme}>
-                    {computedColorScheme === "dark" ? <FaSun /> : <FaMoon />}
-                  </Button>
                 </Group>
               </Group>
             </AppShell.Header>
