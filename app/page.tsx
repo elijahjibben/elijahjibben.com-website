@@ -10,8 +10,18 @@ import {
   Image,
   Group,
   AppShell,
+  Menu,
+  rem,
 } from '@mantine/core';
-import { IconArrowDown } from '@tabler/icons-react';
+import {
+  IconArrowDown,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+  IconBrandYoutube,
+  IconBrandInstagram,
+  IconChevronDown,
+} from '@tabler/icons-react';
 import { Space_Mono } from 'next/font/google';
 
 const spaceMono = Space_Mono({
@@ -84,7 +94,7 @@ export default function HomePage() {
       {/* Navigation bar that fades in */}
       <Transition
         mounted={showHeader}
-        transition="fade"
+        transition="slide-down"
         duration={1000}
         timingFunction="ease"
       >
@@ -108,7 +118,70 @@ export default function HomePage() {
                   <Button variant="light">Blog</Button>
                   <Button variant="light">Projects</Button>
                   <Button variant="light">Resume</Button>
-                  <Button variant="light">Contact</Button>
+                  
+                  {/* Dropdown Menu for Contact */}
+                  <Menu
+                    transitionProps={{ transition: 'pop-top-right' }}
+                    position="bottom-end"
+                    width={200}
+                  >
+                    <Menu.Target>
+                      <Button
+                        variant="light"
+                        rightSection={
+                          <IconChevronDown style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+                        }
+                        pr={12}
+                      >
+                        Contact
+                      </Button>
+                    </Menu.Target>
+                    <Menu.Dropdown>
+                      <Menu.Item
+                        leftSection={<IconBrandGithub size={16} />}
+                        component="a"
+                        href="https://github.com/elijahjibben"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        GitHub
+                      </Menu.Item>
+                      <Menu.Item
+                        leftSection={<IconBrandLinkedin size={16} />}
+                        component="a"
+                        href="https://linkedin.com/in/elijahjibben"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        LinkedIn
+                      </Menu.Item>
+                      <Menu.Item
+                        leftSection={<IconMail size={16} />}
+                        component="a"
+                        href="mailto:elijah.jibben@gmail.com"
+                      >
+                        Email
+                      </Menu.Item>
+                      <Menu.Item
+                        leftSection={<IconBrandYoutube size={16} />}
+                        component="a"
+                        href="https://youtube.com/@elijahjibben"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        YouTube
+                      </Menu.Item>
+                      <Menu.Item
+                        leftSection={<IconBrandInstagram size={16} />}
+                        component="a"
+                        href="https://instagram.com/elijahjibben"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Instagram
+                      </Menu.Item>
+                    </Menu.Dropdown>
+                  </Menu>
                 </Group>
               </Group>
             </AppShell.Header>

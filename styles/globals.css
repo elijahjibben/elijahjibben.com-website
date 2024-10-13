@@ -4,7 +4,7 @@
     width: 13ch; /* 13 characters */
     margin: 0 auto;
     border-right: 3px solid currentColor; /* Keeping the original orange cursor */
-    font-size: clamp(3vw, 6vw, 10vw); /* Scaling font size */
+    font-size: clamp(2vw, 6vw, 10vw); /* Scaling font size */
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
