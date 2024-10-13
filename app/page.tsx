@@ -15,6 +15,20 @@ import {
 } from '@mantine/core';
 import { IconArrowDown } from '@tabler/icons-react';
 import {FaSun, FaMoon} from 'react-icons/fa'
+import { Space_Mono, Anonymous_Pro } from 'next/font/google';
+
+const spaceMono = Space_Mono({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const anonymousPro = Anonymous_Pro({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin']
+});
+
 
 export default function HomePage() {
   // State variables for visibility of navbar and arrow
@@ -31,8 +45,8 @@ export default function HomePage() {
 
   useEffect(() => {
     // Total duration for both typewriter animations
-    const typingDuration1 = 2500; // 3.5 seconds for first line
-    const typingDuration2 = 2000; // 3.5 seconds for second line
+    const typingDuration1 = 2500; // 2.5 seconds for first line
+    const typingDuration2 = 2000; // 2.0 seconds for second line
     const buffer = 500; // 0.5 seconds buffer
 
     const totalDuration = typingDuration1 + buffer + typingDuration2;
@@ -105,12 +119,12 @@ function renderDisplayedText2() {
       <Center style={{ height: '100vh', flexDirection: 'column' }}>
         {/* First Line with Typewriter Effect */}
         <div className="typewriter1">
-          <h1>Elijah Jibben</h1>
+          <h1 className={spaceMono.className}>Elijah Jibben</h1>
         </div>
 
         {/* Second Line with Typewriter Effect and Delay */}
         <div className="typewriter2">
-          <h1>
+          <h1 className={spaceMono.className}>
             {renderDisplayedText2()}
           </h1>
         </div>
