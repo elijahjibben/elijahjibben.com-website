@@ -2,9 +2,9 @@
 "use client";
 
 import React, { useRef } from 'react';
-import HeaderComponent from '../components/Header/Header';
-import MainSection from '../components/Main/LaunchPage';
-import SecondPage from '../components/Pages/SecondPage';
+import HeaderComponent from './components/Header/Header';
+import MainSection from './components/Main/LaunchPage';
+import SecondPage from './components/Pages/SecondPage';
 
 export default function HomePage() {
   const secondPageRef = useRef<HTMLDivElement>(null);
