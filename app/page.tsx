@@ -10,11 +10,8 @@ import {
   Image,
   Group,
   AppShell,
-  useMantineColorScheme,
-  useComputedColorScheme
 } from '@mantine/core';
 import { IconArrowDown } from '@tabler/icons-react';
-import {FaSun, FaMoon} from 'react-icons/fa'
 import { Space_Mono } from 'next/font/google';
 
 const spaceMono = Space_Mono({
@@ -24,56 +21,77 @@ const spaceMono = Space_Mono({
 
 export default function HomePage() {
   // State variables for visibility of navbar and arrow
-  const [showNavbar, setShowNavbar] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
 
   const secondPageRef = useRef<HTMLDivElement>(null);
 
+  // useEffect for showing the arrow after typing animations
   useEffect(() => {
     // Total duration for both typewriter animations
     const typingDuration1 = 2500; // 2.5 seconds for first line
     const typingDuration2 = 2000; // 2.0 seconds for second line
-    const buffer = 500; // 0.5 seconds buffer
+    const buffer = 750; // 0.75 seconds buffer
 
     const totalDuration = typingDuration1 + buffer + typingDuration2;
 
-    // Show navbar and arrow after typing animations complete
+    // Show arrow after typing animations complete
     const timer = setTimeout(() => {
-      setShowNavbar(true);
       setShowArrow(true);
     }, totalDuration);
 
     return () => clearTimeout(timer);
   }, []);
 
+  // useEffect for showing the header on first scroll
+  useEffect(() => {
+    // Handler for scroll event
+    const handleScroll = () => {
+      // Check if user has scrolled down
+      if (window.scrollY > 0) {
+        setShowHeader(true);
+        // Remove the event listener after the first scroll
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Function to render the second line with gradient text
-function renderDisplayedText2() {
-  return (
-    <Text component="span" inherit>
-      <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-        Chemistry
-      </span>
-      {' + '}
-      <span style={{ background: 'var(--gradient-secondary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-        Computer Science
-      </span>
-    </Text>
-  );
-}
-  
+  function renderDisplayedText2() {
+    return (
+      <Text component="span" inherit>
+        <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Chemistry
+        </span>
+        {' + '}
+        <span style={{ background: 'var(--gradient-secondary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Computer Science
+        </span>
+      </Text>
+    );
+  }
+
   return (
     <div>
       {/* Navigation bar that fades in */}
       <Transition
-        mounted={showNavbar}
+        mounted={showHeader}
         transition="fade"
         duration={1000}
         timingFunction="ease"
       >
         {(styles) => (
-          <AppShell header={{height: 60}}>
+          <AppShell header={{ height: 60 }}>
             <AppShell.Header
-              style={{ ...styles, position: 'fixed', top: 0, width: '100%' }}
+              style={{ ...styles, position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}
             >
               <Group
                 align="center"
