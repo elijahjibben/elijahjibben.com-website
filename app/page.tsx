@@ -6,6 +6,7 @@ import HeaderComponent from './components/Header/Header';
 import LaunchPage from './components/Main/LaunchPage';
 import SecondPage from './components/Pages/SecondPage';
 import { useScrollIntoView } from '@mantine/hooks';
+import ThirdPage from './components/Pages/ThirdPage';
 
 export default function HomePage() {
   // Initialize the useScrollIntoView hook
@@ -22,6 +23,10 @@ export default function HomePage() {
       {/* Attach targetRef to the SecondPage container */}
       <div ref={targetRef} style={{ height: '80vh' }}>
         <SecondPage />
+      </div>
+
+      <div>
+        <ThirdPage />
       </div>
     </div>
   );

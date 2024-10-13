@@ -1,6 +1,7 @@
+// components/Pages/secondPage
 import React, { useEffect, useState } from 'react';
 import { Container, Flex, Text, Image, Title, Box, TypographyStylesProvider } from '@mantine/core';
-import './secondPage.css';
+import './animatedLine.css';
 
 function SecondPage() {
   const [inView, setInView] = useState(false);

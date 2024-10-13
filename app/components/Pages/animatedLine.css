@@ -9,4 +9,9 @@
     width: 200px; /* The final width of the lines */
     transition-delay: 0.5s;
   }
-  
+
+  .animate-line-long {
+    width: 690px; /* The final width of the line extending to match the paragraphs */
+    transition-delay: 0.5s;
+  }
+ 
