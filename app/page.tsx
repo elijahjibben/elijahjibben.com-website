@@ -81,16 +81,16 @@ function renderDisplayedText2() {
                 style={{ height: '100%', paddingLeft: 20, paddingRight: 20 }}
               >
                 <Image
-                  src="https://via.placeholder.com/40"
+                  src='../images/turtle_icon.png'
                   alt="Logo"
                   width={40}
                   height={40}
                 />
                 <Group>
-                  <Button variant="subtle">Blog</Button>
-                  <Button variant="subtle">Projects</Button>
-                  <Button variant="subtle">Resume</Button>
-                  <Button variant="subtle">Contact</Button>
+                  <Button variant="light">Blog</Button>
+                  <Button variant="light">Projects</Button>
+                  <Button variant="light">Resume</Button>
+                  <Button variant="light">Contact</Button>
                 </Group>
               </Group>
             </AppShell.Header>
