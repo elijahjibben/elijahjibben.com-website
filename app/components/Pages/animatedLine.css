@@ -1,17 +1,23 @@
-.line {
-    width: 0;
-    height: 2px;
-    background-color: #000;
-    transition: width 1s ease-out;
-  }
-  
-  .animate-line {
-    width: 200px; /* The final width of the lines */
-    transition-delay: 0.5s;
-  }
+/* animatedLine.css */
 
-  .animate-line-long {
-    width: 690px; /* The final width of the line extending to match the paragraphs */
-    transition-delay: 0.5s;
-  }
- 
+.line {
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 1s ease-out;
+}
+
+.animate-line {
+  width: 200px; /* The final width of the lines */
+  transition-delay: 0.5s;
+}
+
+.animate-line-long {
+  width: 690px; /* The final width of the line extending to match the paragraphs */
+  transition-delay: 0.5s;
+}
+
+.animate-line-left {
+  width: 500px; /* Adjust this value as needed */
+  transition-delay: 0.5s;
+}

@@ -7,11 +7,12 @@ import LaunchPage from './components/Main/LaunchPage';
 import SecondPage from './components/Pages/SecondPage';
 import { useScrollIntoView } from '@mantine/hooks';
 import ThirdPage from './components/Pages/ThirdPage';
-import { CardsCarousel } from './Carousels/CardsCarousel';
+import FourthPage from './components/Pages/FourthPage'; // Import the FourthPage
 
 export default function HomePage() {
   // Initialize the useScrollIntoView hook
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
+    // You can add options here if needed
   });
 
   return (
@@ -22,14 +23,17 @@ export default function HomePage() {
       <LaunchPage scrollIntoView={scrollIntoView} />
 
       {/* Attach targetRef to the SecondPage container */}
-      <div ref={targetRef} style={{ height: '80vh' }}>
+      <div ref={targetRef} style={{ height: '75vh' }}>
         <SecondPage />
       </div>
 
-      <div>
+      <div style={{ height: '95vh' }}>
         <ThirdPage />
       </div>
-      
+
+      <div style={{ height: '60vh' }}>
+        <FourthPage />
+      </div>
     </div>
   );
 }

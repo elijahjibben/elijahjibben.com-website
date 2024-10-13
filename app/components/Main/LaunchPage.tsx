@@ -59,7 +59,7 @@ const LaunchPage: React.FC<LaunchPageProps> = ({ scrollIntoView }) => {
       <div style={{ height: '50px', marginTop: 20 }}>
         <ArrowButton
           show={showArrow}
-          onClick={() => scrollIntoView({ alignment: 'end' })}
+          onClick={() => scrollIntoView({ alignment: 'center' })}
         />
       </div>
     </Center>

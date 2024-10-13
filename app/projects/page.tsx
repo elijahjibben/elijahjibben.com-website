@@ -9,7 +9,6 @@ const ProjectsPage: React.FC = () => {
     <div>
       <h1>Projects Page</h1>
       <p>This is where project content will go.</p>
-      <p><CardsCarousel/></p>
     </div>
   );
 };
