@@ -1,18 +1,24 @@
 // components/Main/LaunchPage.tsx
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { Text, Center, Transition, Stack } from '@mantine/core';
+import React, { useState, useEffect } from 'react';
+import { Text, Center } from '@mantine/core';
 import { Space_Mono } from 'next/font/google';
 import ArrowButton from './ArrowButton';
 import GradientText from '../common/GradientText';
 
+// Initialize the Space Mono font
 const spaceMono = Space_Mono({
   weight: '700',
   subsets: ['latin'],
 });
 
-const MainSection: React.FC<{ secondPageRef: React.RefObject<HTMLDivElement> }> = ({ secondPageRef }) => {
+// Define the props interface to include scrollIntoView
+interface LaunchPageProps {
+  scrollIntoView: (params?: { alignment?: 'start' | 'end' | 'center' }) => void;
+}
+
+const LaunchPage: React.FC<LaunchPageProps> = ({ scrollIntoView }) => {
   const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {
@@ -46,21 +52,18 @@ const MainSection: React.FC<{ secondPageRef: React.RefObject<HTMLDivElement> }> 
 
       {/* Second Line with Typewriter Effect and Delay */}
       <div className="typewriter2">
-        <h1 className={spaceMono.className}>
-          {renderDisplayedText2()}
-        </h1>
+        <h1 className={spaceMono.className}>{renderDisplayedText2()}</h1>
       </div>
 
-      {/* Arrow that scrolls down */}
+      {/* Arrow that triggers scrolling */}
       <div style={{ height: '50px', marginTop: 20 }}>
-        <ArrowButton show={showArrow} onClick={() => {
-          if (secondPageRef.current) {
-            secondPageRef.current.scrollIntoView({ behavior: 'smooth' });
-          }
-        }} />
+        <ArrowButton
+          show={showArrow}
+          onClick={() => scrollIntoView({ alignment: 'start' })}
+        />
       </div>
     </Center>
   );
 };
 
-export default MainSection;
+export default LaunchPage;

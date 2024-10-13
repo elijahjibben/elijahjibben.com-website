@@ -37,9 +37,10 @@ function SecondPage() {
       {/* Image and Paragraph centered as a group */}
       <Flex align="center" justify="center">
         <Image
-          src="https://via.placeholder.com/250"
+          src=""
+          fallbackSrc='https://placehold.co/250x250?text=Placeholder'
           alt="Profile photo"
-          radius="md"
+          radius="lg"
           width={250}
           height={250}
           style={{ flexShrink: 0, marginRight: '20px' }} // Ensures the image does not shrink and has space to the right

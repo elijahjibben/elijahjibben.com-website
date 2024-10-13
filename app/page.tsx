@@ -1,21 +1,26 @@
 // app/page.tsx
 "use client";
 
-import React, { useRef } from 'react';
+import React from 'react';
 import HeaderComponent from './components/Header/Header';
-import MainSection from './components/Main/LaunchPage';
+import LaunchPage from './components/Main/LaunchPage';
 import SecondPage from './components/Pages/SecondPage';
+import { useScrollIntoView } from '@mantine/hooks';
 
 export default function HomePage() {
-  const secondPageRef = useRef<HTMLDivElement>(null);
+  // Initialize the useScrollIntoView hook
+  const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
+  });
 
   return (
     <div>
       <HeaderComponent />
 
-      <MainSection secondPageRef={secondPageRef} />
+      {/* Pass the scrollIntoView function to LaunchPage */}
+      <LaunchPage scrollIntoView={scrollIntoView} />
 
-      <div ref={secondPageRef} style={{ height: '100vh' }}>
+      {/* Attach targetRef to the SecondPage container */}
+      <div ref={targetRef} style={{ height: '80vh' }}>
         <SecondPage />
       </div>
     </div>
