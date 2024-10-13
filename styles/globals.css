@@ -64,7 +64,7 @@
   
   /* Gradient colors for typewriter gradients */
   :root {
-    --gradient-primary: linear-gradient(90deg, orange, rgb(0, 0, 0));
-    --gradient-secondary: linear-gradient(90deg, rgb(0, 0, 0), green);
+    --gradient-primary: linear-gradient(90deg, rgb(217, 131, 36), rgb(30, 45, 47));
+    --gradient-secondary: linear-gradient(90deg, rgb(30, 45, 47), rgb(32, 155, 36));
   }
   
