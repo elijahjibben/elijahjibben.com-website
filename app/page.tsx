@@ -12,6 +12,7 @@ import {
   AppShell,
   Menu,
   rem,
+  Flex, // Imported Flex
 } from '@mantine/core';
 import {
   IconArrowDown,
@@ -103,17 +104,21 @@ export default function HomePage() {
             <AppShell.Header
               style={{ ...styles, position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}
             >
-              <Group
+              <Flex
                 align="center"
-                style={{ height: '100%', paddingLeft: 20, paddingRight: 20 }}
+                justify="space-between"
+                style={{ height: '100%', paddingLeft: 20, paddingRight: 20, width: '100%' }}
               >
+                {/* Logo on the Left */}
                 <Image
                   src="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/images/turtle_icon.png?raw=true"
                   alt="Logo"
-                  radius={"xl"}
+                  radius="xl"
                   width={40}
                   height={40}
                 />
+
+                {/* Navigation Buttons on the Right */}
                 <Group>
                   <Button variant="light">Blog</Button>
                   <Button variant="light">Projects</Button>
@@ -128,9 +133,7 @@ export default function HomePage() {
                     <Menu.Target>
                       <Button
                         variant="light"
-                        rightSection={
-                          <IconChevronDown style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-                        }
+                        rightSection={<IconChevronDown style={{ width: rem(18), height: rem(18) }} stroke={1.5} />}
                         pr={12}
                       >
                         Contact
@@ -183,7 +186,7 @@ export default function HomePage() {
                     </Menu.Dropdown>
                   </Menu>
                 </Group>
-              </Group>
+              </Flex>
             </AppShell.Header>
           </AppShell>
         )}
