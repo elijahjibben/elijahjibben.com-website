@@ -134,7 +134,7 @@ export default function HomePage() {
         <div style={{ height: '50px', marginTop: 20 }}>
           <Transition
             mounted={showArrow}
-            transition="fade"
+            transition="fade-down"
             duration={1000}
             timingFunction="ease"
           >
