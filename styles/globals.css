@@ -1,10 +1,10 @@
-  /* Typewriter Animation for the First Line */
-  .typewriter1 h1 {
+/* Typewriter Animation for the First Line */
+.typewriter1 h1 {
     position: relative;
     width: 13ch; /* 13 characters */
     margin: 0 auto;
     border-right: 3px solid currentColor; /* Keeping the original orange cursor */
-    font-size: 600%;
+    font-size: clamp(3vw, 6vw, 10vw); /* Scaling font size */
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -18,13 +18,13 @@
     width: 0; /* Initially hide the text */
     margin: 0 auto;
     border-right: 3px solid transparent; /* Initially transparent cursor */
-    font-size: 250%;
+    font-size: clamp(1vw, 2.6vw, 10vw); /* Scaling font size */
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     animation: typing2 2s steps(28, end) forwards, blink-caret 0.75s step-end infinite;
     /* Specify delays for each animation */
-    animation-delay: 3s, 2.5s; /* Typing, Cursor*/
+    animation-delay: 3s, 2.5s; /* Typing, Cursor */
     animation-fill-mode: forwards;
     line-height: 1.2; /* Adjust as needed for cursor alignment */
   }

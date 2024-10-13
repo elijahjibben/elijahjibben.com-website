@@ -80,7 +80,7 @@ function renderDisplayedText2() {
                 style={{ height: '100%', paddingLeft: 20, paddingRight: 20 }}
               >
                 <Image
-                  src="https://github.com/elijahjibben/mantine-testing/blob/master/images/turtle_icon.png?raw=true"
+                  src="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/images/turtle_icon.png?raw=true"
                   alt="Logo"
                   radius={"xl"}
                   width={40}

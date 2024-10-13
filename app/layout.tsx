@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: any }) {
     <html lang="en">
       <head>
         <ColorSchemeScript/>
-        <link rel="shortcut icon" href="https://github.com/elijahjibben/mantine-testing/blob/master/images/turtle_icon_transparent.png?raw=true" />
+        <link rel="shortcut icon" href="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/images/turtle_icon_transparent.png?raw=true" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
