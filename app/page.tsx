@@ -1,14 +1,15 @@
 // app/page.tsx
-"use client";
+
+'use client';
 
 import React from 'react';
+import { useScrollIntoView } from '@mantine/hooks';
+import FooterComponent from './components/common/Footer';
 import HeaderComponent from './components/Header/Header';
 import LaunchPage from './components/Main/LaunchPage';
-import SecondPage from './components/Pages/SecondPage';
-import { useScrollIntoView } from '@mantine/hooks';
-import ThirdPage from './components/Pages/ThirdPage';
 import FourthPage from './components/Pages/FourthPage'; // Import the FourthPage
-import FooterComponent from './components/common/Footer';
+import SecondPage from './components/Pages/SecondPage';
+import ThirdPage from './components/Pages/ThirdPage';
 
 export default function HomePage() {
   // Initialize the useScrollIntoView hook
@@ -37,10 +38,8 @@ export default function HomePage() {
       </div>
 
       <div>
-        <FooterComponent/>
+        <FooterComponent />
       </div>
-
-
     </div>
   );
 }

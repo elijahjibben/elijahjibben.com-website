@@ -1,11 +1,13 @@
 // components/Pages/secondPage
 import React, { useEffect, useState } from 'react';
-import { Container, Flex, Text, Image, Title, Box, TypographyStylesProvider } from '@mantine/core';
+import { Box, Container, Flex, Image, Title, TypographyStylesProvider } from '@mantine/core';
+
 import './animatedLine.css';
 
 function SecondPage() {
   const [inView, setInView] = useState(false);
-  const html = '<p>Hello, my name is Elijah! I am currently a junior chemistry and computer science student at Grand Canyon University.</p><p>My biggest interests are in particle simulations and quantum chemistry. I also have a deep interest in organic chemistry and how it can be modeled through computational techniques. In computer science, I am particularly drawn to machine learning and platform design. In my free time, I enjoy modding video games and exploring the applications of virtual reality.</p><p>After graduation, I plan to pursue a PhD in Chemistry, focusing on computational or quantum chemistry, and build a career in research. I am incredibly passionate about chemistry, and I am driven by the opportunity to apply computer science to the field.</p>';
+  const html =
+    '<p>Hello, my name is Elijah! I am currently a junior chemistry and computer science student at Grand Canyon University.</p><p>My biggest interests are in particle simulations and quantum chemistry. I also have a deep interest in organic chemistry and how it can be modeled through computational techniques. In computer science, I am particularly drawn to machine learning and platform design. In my free time, I enjoy modding video games and exploring the applications of virtual reality.</p><p>After graduation, I plan to pursue a PhD in Chemistry, focusing on computational or quantum chemistry, and build a career in research. I am incredibly passionate about chemistry, and I am driven by the opportunity to apply computer science to the field.</p>';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +41,7 @@ function SecondPage() {
       <Flex align="center" justify="center">
         <Image
           src=""
-          fallbackSrc='https://placehold.co/250x250?text=Placeholder'
+          fallbackSrc="https://placehold.co/250x250?text=Placeholder"
           alt="Profile photo"
           radius="lg"
           width={250}

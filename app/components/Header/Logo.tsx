@@ -1,7 +1,7 @@
 // components/Header/Logo.tsx
 import React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { ActionIcon, Image } from '@mantine/core';
-import { useRouter, usePathname } from 'next/navigation';
 
 const Logo: React.FC = () => {
   const router = useRouter();
@@ -16,10 +16,10 @@ const Logo: React.FC = () => {
   };
 
   return (
-    <ActionIcon 
-      onClick={handleLogoClick} 
+    <ActionIcon
+      onClick={handleLogoClick}
       style={{ cursor: 'pointer' }}
-      variant='transparent'
+      variant="transparent"
       size="xl"
     >
       <Image

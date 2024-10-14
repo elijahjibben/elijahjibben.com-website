@@ -1,15 +1,5 @@
-import bundleAnalyzer from '@next/bundle-analyzer';
+const nextConfig = {
+  output: 'export', // To enable static export for GitHub Pages
+};
 
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-export default withBundleAnalyzer({
-  reactStrictMode: false,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  experimental: {
-    optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
-  },
-});
+export default nextConfig;

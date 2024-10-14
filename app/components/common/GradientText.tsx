@@ -6,12 +6,16 @@ interface GradientTextProps {
   gradient: string;
 }
 
-const GradientText: React.FC<GradientTextProps> = ({ text, gradient }) => {
-  return (
-    <span style={{ background: gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-      {text}
-    </span>
-  );
-};
+const GradientText: React.FC<GradientTextProps> = ({ text, gradient }) => (
+  <span
+    style={{
+      background: gradient,
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+    }}
+  >
+    {text}
+  </span>
+);
 
 export default GradientText;

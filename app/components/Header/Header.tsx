@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Transition, AppShell, Flex } from '@mantine/core';
+import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { AppShell, Flex, Transition } from '@mantine/core';
 import Logo from './Logo';
 import NavigationButtons from './NavigationButtons';
-import { usePathname } from 'next/navigation';
 
 const HeaderComponent: React.FC = () => {
   const pathname = usePathname(); // Get the current route
@@ -21,26 +21,27 @@ const HeaderComponent: React.FC = () => {
       };
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
-    } else {
-      setShowHeader(true); // Ensure header is visible on non-root routes
     }
+    setShowHeader(true); // Ensure header is visible on non-root routes
+
+    return undefined;
   }, [isRoot]);
 
   return (
     <Transition
       mounted={showHeader}
-      transition={isRoot ? "slide-down" : undefined} // Apply transition only on root
+      transition={isRoot ? 'slide-down' : undefined} // Apply transition only on root
       duration={isRoot ? 1000 : 0} // Duration 0 for no transition on non-root
-      timingFunction={isRoot ? "ease" : undefined}
+      timingFunction={isRoot ? 'ease' : undefined}
     >
       {(styles) => (
         <AppShell header={{ height: 60 }}>
           <AppShell.Header
-            style={{ 
-              ...styles, 
-              position: 'fixed', 
-              top: 0, 
-              width: '100%', 
+            style={{
+              ...styles,
+              position: 'fixed',
+              top: 0,
+              width: '100%',
               zIndex: 1000,
             }}
           >

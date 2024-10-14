@@ -1,11 +1,12 @@
 // components/Main/LaunchPage.tsx
-"use client";
 
-import React, { useState, useEffect } from 'react';
-import { Text, Center } from '@mantine/core';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { Space_Mono } from 'next/font/google';
-import ArrowButton from './ArrowButton';
+import { Center, Text } from '@mantine/core';
 import GradientText from '../common/GradientText';
+import ArrowButton from './ArrowButton';
 
 // Initialize the Space Mono font
 const spaceMono = Space_Mono({
@@ -38,7 +39,8 @@ const LaunchPage: React.FC<LaunchPageProps> = ({ scrollIntoView }) => {
   // Function to render the second line with gradient text
   const renderDisplayedText2 = () => (
     <Text component="span" inherit>
-      <GradientText text="Chemistry" gradient="var(--gradient-primary)" />{' + '}
+      <GradientText text="Chemistry" gradient="var(--gradient-primary)" />
+      {' + '}
       <GradientText text="Computer Science" gradient="var(--gradient-secondary)" />
     </Text>
   );
@@ -57,10 +59,7 @@ const LaunchPage: React.FC<LaunchPageProps> = ({ scrollIntoView }) => {
 
       {/* Arrow that triggers scrolling */}
       <div style={{ height: '50px', marginTop: 20 }}>
-        <ArrowButton
-          show={showArrow}
-          onClick={() => scrollIntoView({ alignment: 'center' })}
-        />
+        <ArrowButton show={showArrow} onClick={() => scrollIntoView({ alignment: 'center' })} />
       </div>
     </Center>
   );

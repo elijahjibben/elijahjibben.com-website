@@ -15,8 +15,11 @@ export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
       <head>
-        <ColorSchemeScript/>
-        <link rel="shortcut icon" href="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/app/images/turtle_icon_transparent.png?raw=true" />
+        <ColorSchemeScript />
+        <link
+          rel="shortcut icon"
+          href="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/app/images/turtle_icon_transparent.png?raw=true"
+        />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

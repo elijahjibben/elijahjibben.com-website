@@ -1,70 +1,73 @@
 /* Typewriter Animation for the First Line */
 .typewriter1 h1 {
-    position: relative;
-    width: 13ch; /* 13 characters */
-    margin: 0 auto;
-    border-right: 3px solid currentColor; /* Keeping the original orange cursor */
-    font-size: clamp(2vw, 6vw, 10vw); /* Scaling font size */
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing1 2.5s steps(13, end) forwards, blink-caret 0.75s step-end 3 forwards;
-    line-height: 1.2;
+  position: relative;
+  width: 13ch; /* 13 characters */
+  margin: 0 auto;
+  border-right: 3px solid currentColor; /* Keeping the original orange cursor */
+  font-size: clamp(2vw, 6vw, 10vw); /* Scaling font size */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing1 2.5s steps(13, end) forwards,
+    blink-caret 0.75s step-end 3 forwards;
+  line-height: 1.2;
+}
+
+/* Typewriter Animation for the Second Line */
+.typewriter2 h1 {
+  position: relative;
+  width: 0; /* Initially hide the text */
+  margin: 0 auto;
+  border-right: 3px solid transparent; /* Initially transparent cursor */
+  font-size: clamp(1vw, 2.6vw, 10vw); /* Scaling font size */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing2 2s steps(28, end) forwards,
+    blink-caret 0.75s step-end infinite;
+  /* Specify delays for each animation */
+  animation-delay: 3s, 2.5s; /* Typing, Cursor */
+  animation-fill-mode: forwards;
+  line-height: 1.2; /* Adjust as needed for cursor alignment */
+}
+
+/* The typing effect for the first line */
+@keyframes typing1 {
+  from {
+    width: 0;
   }
-  
-  /* Typewriter Animation for the Second Line */
-  .typewriter2 h1 {
-    position: relative;
-    width: 0; /* Initially hide the text */
-    margin: 0 auto;
-    border-right: 3px solid transparent; /* Initially transparent cursor */
-    font-size: clamp(1vw, 2.6vw, 10vw); /* Scaling font size */
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing2 2s steps(28, end) forwards, blink-caret 0.75s step-end infinite;
-    /* Specify delays for each animation */
-    animation-delay: 3s, 2.5s; /* Typing, Cursor */
-    animation-fill-mode: forwards;
-    line-height: 1.2; /* Adjust as needed for cursor alignment */
+  to {
+    width: 13ch;
   }
-  
-  /* The typing effect for the first line */
-  @keyframes typing1 {
-    from {
-      width: 0;
-    }
-    to {
-      width: 13ch;
-    }
+}
+
+/* The typing effect for the second line */
+@keyframes typing2 {
+  from {
+    width: 0;
+    border-right-color: transparent; /* Hide cursor initially */
   }
-  
-  /* The typing effect for the second line */
-  @keyframes typing2 {
-    from {
-      width: 0;
-      border-right-color: transparent; /* Hide cursor initially */
-    }
-    to {
-      width: 28ch;
-      border-right-color: currentColor; /* Show cursor after typing */
-    }
+  to {
+    width: 28ch;
+    border-right-color: currentColor; /* Show cursor after typing */
   }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: currentColor;
-    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
-  
-  /* Gradient colors for typewriter gradients */
-  :root {
-    --gradient-primary: linear-gradient(90deg, rgb(217, 131, 36), rgb(30, 45, 47));
-    --gradient-secondary: linear-gradient(90deg, rgb(30, 45, 47), rgb(32, 155, 36));
+  50% {
+    border-color: currentColor;
   }
-  
+}
+
+/* Gradient colors for typewriter gradients */
+:root {
+  --gradient-primary: linear-gradient(90deg, rgb(217, 131, 36), rgb(30, 45, 47));
+  --gradient-secondary: linear-gradient(90deg, rgb(30, 45, 47), rgb(32, 155, 36));
+}

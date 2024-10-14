@@ -1,10 +1,19 @@
 // components/Pages/FourthPage.tsx
-"use client";
+
+'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Container, Flex, Title, Text, Box, Button, rem, ActionIcon } from '@mantine/core';
+import { ActionIcon, Box, Container, Flex, Text, Title } from '@mantine/core';
+
 import './animatedLine.css';
-import { IconBrandGithub, IconBrandLinkedin, IconMail, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+
+import {
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandYoutube,
+  IconMail,
+} from '@tabler/icons-react';
 
 const socialLinks = [
   {
@@ -72,7 +81,8 @@ function FourthPage() {
       <Flex justify="center" mb="xl">
         <Box w="60%">
           <Text>
-            I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out through any of the platforms below.
+            I&apos;d love to hear from you! Whether you have a question, want to collaborate, or
+            just want to say hi, feel free to reach out through any of the platforms below.
           </Text>
         </Box>
       </Flex>
@@ -82,9 +92,9 @@ function FourthPage() {
         {socialLinks.map((link) => (
           <ActionIcon
             key={link.label} // Add a key prop for list rendering
-            variant='light'
-            size='xl'
-            radius='md'
+            variant="light"
+            size="xl"
+            radius="md"
             aria-label={link.label}
             component="a"
             href={link.href}

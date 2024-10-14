@@ -16,7 +16,7 @@ export const theme = createTheme({
       '#39588f',
       '#2d4b81',
     ],
-    
+
     orange: [
       '#c57b57',
       '#b16f4e',
@@ -36,5 +36,4 @@ export const theme = createTheme({
 
   white: 'rgb(222, 219, 210)',
   black: 'rgb(30, 45, 47)',
-
 });
