@@ -28,7 +28,7 @@ export default function HomePage() {
         <SecondPage />
       </div>
 
-      <div style={{ height: '95vh' }}>
+      <div style={{ height: '100vh' }}>
         <ThirdPage />
       </div>
 
