@@ -10,3 +10,9 @@ export default withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
 });
+
+const nextConfig = {
+  output: "export",
+};
+
+module.exports = nextConfig;
