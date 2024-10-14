@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Flex, Title, Text, Box } from '@mantine/core';
 import './animatedLine.css';
-import { CardsCarousel } from '@/app/Carousels/CardsCarousel';
+import { CardsCarousel } from '@/app/components/Carousels/CardsCarousel';
 
 function ThirdPage() {
   const [inView, setInView] = useState(false);

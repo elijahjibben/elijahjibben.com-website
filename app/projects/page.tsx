@@ -2,7 +2,7 @@
 'use client'
 
 import React from 'react';
-import { CardsCarousel } from '../Carousels/CardsCarousel';
+import { CardsCarousel } from '../components/Carousels/CardsCarousel';
 
 const ProjectsPage: React.FC = () => {
   return (
