@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: any }) {
         <ColorSchemeScript />
         <link
           rel="shortcut icon"
-          href="https://github.com/elijahjibben/elijahjibben.com-website/blob/master/app/images/turtle_icon_transparent.png?raw=true"
+          href="/turtle_icon_transparent.png"
         />
         <meta
           name="viewport"
