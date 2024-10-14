@@ -8,7 +8,7 @@ import { theme } from '../theme';
 
 export const metadata = {
   title: 'Elijah Jibben',
-  description: 'I am making a website!',
+  description: 'A personal portfolio website',
 };
 
 export default function RootLayout({ children }: { children: any }) {
