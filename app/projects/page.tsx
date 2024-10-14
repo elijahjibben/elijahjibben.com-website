@@ -2,7 +2,6 @@
 'use client'
 
 import React from 'react';
-import { CardsCarousel } from '../components/Carousels/CardsCarousel';
 import HeaderComponent from '../components/Header/Header';
 
 const ProjectsPage: React.FC = () => {
