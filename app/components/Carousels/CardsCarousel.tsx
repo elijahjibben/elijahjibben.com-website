@@ -33,7 +33,7 @@ function Card({ image, title, category }: CardProps) {
 const data = [
   {
     image: './project-images/website-creation/website-creation-thumbnail.png',
-    title: 'Creation of this website',
+    title: 'Creating a Portfolio Website',
     category: 'Project',
   },
   {
