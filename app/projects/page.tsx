@@ -4,7 +4,7 @@
 
 import React from 'react';
 import HeaderComponent from '../components/Header/Header';
-import ArticlesCardsGrid from './ArticlesCardsGrid';
+import ArticlesCardsGrid from './ProjectsArticlesCardsGrid';
 
 const ProjectsPage: React.FC = () => (
   <div style={{ paddingTop: '50px' }}>

@@ -1,0 +1,20 @@
+/* src/app/projects/ProjectsArticlesCardsGrid.module.css */
+
+.card {
+  /* Apply the shadow all the time */
+  box-shadow: var(--mantine-shadow-md);
+  transition: transform 150ms ease;
+  cursor: pointer;
+
+  /* Optional: Keep hover scale effect */
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.title {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  font-weight: bold;
+  color: var(--mantine-color-black);
+  flex-grow: 1;
+}
