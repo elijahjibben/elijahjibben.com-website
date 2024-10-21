@@ -17,32 +17,11 @@ import classes from './BlogArticlesCardsGrid.module.css';
 // Data for each of the article cards
 const articleData = [
   {
-    title: 'Top 10 Places to Visit in Norway This Summer',
+    title: 'Is Capsaicin the Spiciest Substance?',
     image:
-      'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80',
-    date: 'August 18, 2022',
-    route: '/blog/blog-1',
-  },
-  {
-    title: 'Best Forests to Visit in North America',
-    image:
-      'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80',
-    date: 'August 27, 2022',
-    route: '/blog/blog-2',
-  },
-  {
-    title: 'Hawaii Beaches Review: Better Than You Think',
-    image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80',
-    date: 'September 9, 2022',
-    route: '/blog/blog-3',
-  },
-  {
-    title: 'Mountains at Night: 12 Best Locations to Enjoy the View',
-    image:
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80',
-    date: 'September 12, 2022',
-    route: '/blog/blog-4',
+      './blog-images/capsaicin/capsaicin-thumbnail-16-9.png',
+    date: 'To Be Written',
+    route: '/blog/capsaicin',
   },
 ];
 
