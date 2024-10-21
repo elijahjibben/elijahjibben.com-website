@@ -40,12 +40,12 @@ function SecondPage() {
       {/* Image and Paragraph centered as a group */}
       <Flex align="center" justify="center">
         <Image
-          src=""
-          fallbackSrc="https://placehold.co/250x250?text=Placeholder"
+          src="./ejibben_headshot.png"
+          fallbackSrc="https://placehold.co/350x350?text=Placeholder"
           alt="Profile photo"
-          radius="lg"
-          width={250}
-          height={250}
+          radius="xl"
+          width={350}
+          height={350}
           style={{ flexShrink: 0, marginRight: '20px' }} // Ensures the image does not shrink and has space to the right
         />
         <Box w={450}>
