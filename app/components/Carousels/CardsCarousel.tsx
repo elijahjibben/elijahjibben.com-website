@@ -1,6 +1,6 @@
+import { useRouter } from 'next/navigation';
 import { Carousel } from '@mantine/carousel';
 import { Button, Paper, rem, Text, Title } from '@mantine/core';
-import { useRouter } from 'next/navigation';
 import classes from './CardsCarousel.module.css';
 
 interface CardProps {
@@ -33,7 +33,9 @@ function Card({ image, title, category, route }: CardProps) {
           {title}
         </Title>
       </div>
-      <Button variant="filled" onClick={handleClick}>Read article</Button>
+      <Button variant="filled" onClick={handleClick}>
+        Read article
+      </Button>
     </Paper>
   );
 }

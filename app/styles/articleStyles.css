@@ -18,6 +18,8 @@
 }
 
 /* Style table borders and lines to be black */
-.article-content table, .article-content th, .article-content td {
+.article-content table,
+.article-content th,
+.article-content td {
   border: 1px solid var(--mantine-color-black); /* Make table borders black */
 }
