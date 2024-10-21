@@ -1,15 +1,15 @@
-// src/pages/ProjectsPage.tsx
+// src/app/projects/page.tsx
 
 'use client';
 
 import React from 'react';
 import HeaderComponent from '../components/Header/Header';
+import ArticlesCardsGrid from './ArticlesCardsGrid';
 
 const ProjectsPage: React.FC = () => (
   <div style={{ paddingTop: '50px' }}>
     <HeaderComponent />
-    <h1>Projects Page</h1>
-    <p>This is where project content will go.</p>
+    <ArticlesCardsGrid />
   </div>
 );
 
