@@ -26,17 +26,16 @@ export default function HomePage() {
 
       {/* Attach targetRef to the SecondPage container */}
       <div ref={targetRef} style={{ padding: '50px 0' }}>
-          <SecondPage />
-        </div>
+        <SecondPage />
+      </div>
 
-        <div style={{ padding: '50px 0' }}>
-          <ThirdPage />
-        </div>
+      <div style={{ padding: '50px 0' }}>
+        <ThirdPage />
+      </div>
 
-        <div style={{ padding: '50px 0' }}>
-          <FourthPage />
-        </div>
-
+      <div style={{ padding: '50px 0' }}>
+        <FourthPage />
+      </div>
 
       <div>
         <FooterComponent />

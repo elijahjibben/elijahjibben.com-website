@@ -22,12 +22,7 @@ const Logo: React.FC = () => {
       variant="transparent"
       size="xl"
     >
-      <Image
-        src="/turtle_icon_transparent.png"
-        alt="Logo"
-        width={40}
-        height={40}
-      />
+      <Image src="/turtle_icon_transparent.png" alt="Logo" width={40} height={40} />
     </ActionIcon>
   );
 };
