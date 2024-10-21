@@ -1,14 +1,22 @@
 import { Carousel } from '@mantine/carousel';
 import { Button, Paper, rem, Text, Title } from '@mantine/core';
+import { useRouter } from 'next/navigation';
 import classes from './CardsCarousel.module.css';
 
 interface CardProps {
   image: string;
   title: string;
   category: string;
+  route: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({ image, title, category, route }: CardProps) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(route);
+  };
+
   return (
     <Paper
       shadow="md"
@@ -25,7 +33,7 @@ function Card({ image, title, category }: CardProps) {
           {title}
         </Title>
       </div>
-      <Button variant="filled">Read article</Button>
+      <Button variant="filled" onClick={handleClick}>Read article</Button>
     </Paper>
   );
 }
@@ -35,16 +43,19 @@ const data = [
     image: './projects/website-creation/images/website-creation-thumbnail.png',
     title: 'Creating a Portfolio Website',
     category: 'Project',
+    route: '/projects/website-creation',
   },
   {
     image: './projects/capsaicin-extraction/images/capsaicin-project-thumbnail.png',
     title: 'Extraction of capsaicin from ghost peppers',
     category: 'Project',
+    route: '/projects/capsaicin-extraction',
   },
   {
     image: './blog-articles/capsaicin/images/capsaicin-thumbnail.png',
     title: 'Is capsaicin the spiciest substance?',
     category: 'Blog',
+    route: '/blog/capsaicin',
   },
 ];
 

@@ -18,7 +18,7 @@ const articleData = [
   {
     title: 'Extraction of Capsaicin from Ghost Peppers',
     image: './projects/capsaicin-extraction/images/capsaicin-project-thumbnail-16-9.png',
-    date: 'To Be Written',
+    date: 'October 21, 2024',
     route: '/projects/capsaicin-extraction',
   },
 ];
