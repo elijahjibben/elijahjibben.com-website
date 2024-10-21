@@ -1,4 +1,4 @@
-// components/Pages/secondPage
+// app/components/Pages/SecondPage
 import React, { useEffect, useState } from 'react';
 import { Box, Container, Flex, Image, Title, TypographyStylesProvider } from '@mantine/core';
 

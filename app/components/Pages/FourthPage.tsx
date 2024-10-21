@@ -1,4 +1,4 @@
-// components/Pages/FourthPage.tsx
+// app/components/Pages/FourthPage.tsx
 
 'use client';
 

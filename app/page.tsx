@@ -25,17 +25,18 @@ export default function HomePage() {
       <LaunchPage scrollIntoView={scrollIntoView} />
 
       {/* Attach targetRef to the SecondPage container */}
-      <div ref={targetRef} style={{ height: '75vh' }}>
-        <SecondPage />
-      </div>
+      <div ref={targetRef} style={{ padding: '50px 0' }}>
+          <SecondPage />
+        </div>
 
-      <div style={{ height: '100vh' }}>
-        <ThirdPage />
-      </div>
+        <div style={{ padding: '50px 0' }}>
+          <ThirdPage />
+        </div>
 
-      <div style={{ height: '60vh' }}>
-        <FourthPage />
-      </div>
+        <div style={{ padding: '50px 0' }}>
+          <FourthPage />
+        </div>
+
 
       <div>
         <FooterComponent />

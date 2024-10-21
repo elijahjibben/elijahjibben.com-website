@@ -1,3 +1,4 @@
+// app/components/Pages/ThirdPage
 'use client';
 
 import React, { useEffect, useState } from 'react';
