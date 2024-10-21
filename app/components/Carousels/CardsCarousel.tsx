@@ -33,24 +33,19 @@ function Card({ image, title, category }: CardProps) {
 
 const data = [
   {
-    image: 'https://placehold.co/400x600',
+    image: './project-images/website-creation/website-creation-thumbnail.png',
     title: 'Creation of this website',
     category: 'Project',
   },
   {
-    image: 'https://placehold.co/400x600',
+    image: './project-images/capsaicin-extraction/capsaicin-project-thumbnail.png',
     title: 'Extraction of capsaicin from ghost peppers',
     category: 'Project',
   },
   {
-    image: 'https://placehold.co/400x600',
+    image: './blog-images/capsaicin/capsaicin-thumbnail.png',
     title: 'Is capsaicin the spiciest substance?',
     category: 'Blog',
-  },
-  {
-    image: 'https://placehold.co/400x600',
-    title: 'Sifting through Minecrafts source code to make mods',
-    category: 'blog',
   },
 ];
 
@@ -68,7 +63,7 @@ export function CardsCarousel() {
       slideSize={{ base: '100%', sm: '40%' }}
       slideGap={{ base: rem(2), sm: 'lg' }}
       align="start"
-      slidesToScroll={mobile ? 1 : 2}
+      slidesToScroll={1}
       loop
       withIndicators
       classNames={{ control: classes.control, indicator: classes.indicator }}
