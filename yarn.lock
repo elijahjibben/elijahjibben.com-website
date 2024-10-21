@@ -10172,6 +10172,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.4.6"
     "@testing-library/react": "npm:^16.0.0"
     "@testing-library/user-event": "npm:^14.5.2"
+    "@tiptap/core": "npm:^2.8.0"
     "@tiptap/extension-link": "npm:^2.8.0"
     "@tiptap/pm": "npm:^2.8.0"
     "@tiptap/react": "npm:^2.8.0"
@@ -10212,6 +10213,7 @@ __metadata:
     stylelint-config-standard-scss: "npm:^13.1.0"
     ts-jest: "npm:^29.1.5"
     typescript: "npm:5.5.2"
+    webpack: "npm:^5.95.0"
   languageName: unknown
   linkType: soft
 
@@ -14442,7 +14444,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5":
+"webpack@npm:5, webpack@npm:^5.95.0":
   version: 5.95.0
   resolution: "webpack@npm:5.95.0"
   dependencies:
