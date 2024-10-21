@@ -4,3 +4,9 @@
 .article-content {
   font-family: 'Space Mono', monospace;
 }
+
+.article-content img {
+  max-width: 100%; /* Ensures image fits the container */
+  max-height: 600px;
+  border-radius: 12px; /* Add border-radius */
+}

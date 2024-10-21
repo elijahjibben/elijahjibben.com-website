@@ -11,13 +11,13 @@ import classes from './ProjectsArticlesCardsGrid.module.css';
 const articleData = [
   {
     title: 'Creating a Portfolio Website',
-    image: './project-images/website-creation/website-creation-thumbnail-16-9.png',
+    image: './projects/website-creation/images/website-creation-thumbnail-16-9.png',
     date: 'To Be Written',
     route: '/projects/website-creation',
   },
   {
     title: 'Extraction of Capsaicin from Ghost Peppers',
-    image: './project-images/capsaicin-extraction/capsaicin-project-thumbnail-16-9.png',
+    image: './projects/capsaicin-extraction/images/capsaicin-project-thumbnail-16-9.png',
     date: 'To Be Written',
     route: '/projects/capsaicin-extraction',
   },

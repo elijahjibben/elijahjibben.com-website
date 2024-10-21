@@ -10498,6 +10498,7 @@ __metadata:
     eslint-plugin-testing-library: "npm:^6.2.2"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
+    marked: "npm:^14.1.3"
     next: "npm:^14.2.15"
     postcss: "npm:^8.4.38"
     postcss-preset-mantine: "npm:1.17.0"
@@ -10557,6 +10558,15 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: 10c0/88213e64afd41d6934fbb70bcea0e2ef1f9553db1ba4c6f423b17d6e9c2b99c82b0fcbed29036dd5b91704b170803d1fae730ab40ae27af5c7994e2717686ebc
+  languageName: node
+  linkType: hard
+
+"marked@npm:^14.1.3":
+  version: 14.1.3
+  resolution: "marked@npm:14.1.3"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/074485dc4a1f73cd12724d61c3c6d0d21590f3f441aca5a26d52c79641c9b147eb3b3244f524c25255a59f81445b2040747ca6665c4a2508b7e653a7dcb6f65f
   languageName: node
   linkType: hard
 

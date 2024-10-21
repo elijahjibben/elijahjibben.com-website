@@ -32,17 +32,17 @@ function Card({ image, title, category }: CardProps) {
 
 const data = [
   {
-    image: './project-images/website-creation/website-creation-thumbnail.png',
+    image: './projects/website-creation/images/website-creation-thumbnail.png',
     title: 'Creating a Portfolio Website',
     category: 'Project',
   },
   {
-    image: './project-images/capsaicin-extraction/capsaicin-project-thumbnail.png',
+    image: './projects/capsaicin-extraction/images/capsaicin-project-thumbnail.png',
     title: 'Extraction of capsaicin from ghost peppers',
     category: 'Project',
   },
   {
-    image: './blog-images/capsaicin/capsaicin-thumbnail.png',
+    image: './blog-articles/capsaicin/images/capsaicin-thumbnail.png',
     title: 'Is capsaicin the spiciest substance?',
     category: 'Blog',
   },

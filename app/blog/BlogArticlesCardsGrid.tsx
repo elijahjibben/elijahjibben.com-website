@@ -11,7 +11,7 @@ import classes from './BlogArticlesCardsGrid.module.css';
 const articleData = [
   {
     title: 'Is Capsaicin the Spiciest Substance?',
-    image: './blog-images/capsaicin/capsaicin-thumbnail-16-9.png',
+    image: './blog-articles/capsaicin/images/capsaicin-thumbnail-16-9.png',
     date: 'To Be Written',
     route: '/blog/capsaicin',
   },
