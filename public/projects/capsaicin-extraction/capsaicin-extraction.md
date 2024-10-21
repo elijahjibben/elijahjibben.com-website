@@ -1,5 +1,7 @@
 # Extraction of Capsaicin from Ghost Peppers
 
+---
+
 # Objectives
 
 1. Complete a solid-liquid extraction via Soxhlet extractor.
