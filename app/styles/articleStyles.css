@@ -1,5 +1,5 @@
 /* articleStyles.css */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap';
 
 .article-content {
   font-family: 'Space Mono', monospace;
