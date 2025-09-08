@@ -7,7 +7,7 @@ import './animatedLine.css';
 function SecondPage() {
   const [inView, setInView] = useState(false);
   const html =
-    '<p>Hello, my name is Elijah! I am currently a junior chemistry and computer science student at Grand Canyon University.</p><p>My biggest interests are in particle simulations and quantum chemistry. I also have a deep interest in organic chemistry and how it can be modeled through computational techniques. In computer science, I am particularly drawn to machine learning and platform design. In my free time, I enjoy modding video games and exploring the applications of virtual reality.</p><p>After graduation, I plan to pursue a PhD in Chemistry, focusing on computational or quantum chemistry, and build a career in research. I am incredibly passionate about chemistry, and I am driven by the opportunity to apply computer science to the field.</p>';
+    '<p>Hey, I'm Elijah. I'm a senior chemistry and computer science student at Grand Canyon University.</p><p>I am interested in the fields of computational chemistry and quantum chemistry. In particular I am drawn to excited state systems and electron dynamics as well as the potential future application of quantum computing to the field of computational chemsitry. In my free time I build websites and platforms, mod video games, and continue to explore the world of chemistry.</p><p>After graduation I plan to pursue a PhD in Chemistry focusing on theoretical chemistry, and build a career in research. I am incredibly passionate about chemistry, research, and contributing ethically to the field of science.</p>';
 
   useEffect(() => {
     const handleScroll = () => {
