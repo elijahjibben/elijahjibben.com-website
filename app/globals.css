@@ -35,21 +35,23 @@
 
 /* The typing effect for the first line */
 @keyframes typing1 {
-  from {
+  0% {
     width: 0;
   }
-  to {
+
+  100% {
     width: 13ch;
   }
 }
 
 /* The typing effect for the second line */
 @keyframes typing2 {
-  from {
+  0% {
     width: 0;
     border-right-color: transparent; /* Hide cursor initially */
   }
-  to {
+
+  100% {
     width: 28ch;
     border-right-color: currentColor; /* Show cursor after typing */
   }
@@ -57,10 +59,11 @@
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from,
-  to {
+  0%,
+  100% {
     border-color: transparent;
   }
+
   50% {
     border-color: currentColor;
   }
