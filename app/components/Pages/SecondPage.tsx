@@ -10,8 +10,8 @@ function SecondPage() {
     <p>Hey, I'm Elijah. I'm a senior chemistry and computer science student at Grand Canyon University.</p>
     <p>
       I am interested in the fields of computational chemistry and quantum chemistry. In particular I am drawn
-      to excited state systems and electron dynamics as well as the potential future application of quantum
-      computing to the field of computational chemsitry. In my free time I build websites and platforms, mod
+      to excited state systems, electron dynamics, application of quantum
+      computing, and novel methods development. In my free time I build websites and platforms, mod
       video games, and continue to explore the world of chemistry.
     </p>
     <p>
